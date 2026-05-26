@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajiv Plastics Case Study | GHL Enterprise</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .case-hero {
+            position: relative;
+            padding: 15rem 0 8rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600') center/cover;
+            opacity: 0.15;
+            z-index: -1;
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="mesh-bg"></div>
+    <div class="grid-bg"></div>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-layer-group"></i> GHL<span>Enterprise</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Platform</a></li>
+                <li><a href="case-studies.html" class="active">Case Studies</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="case-hero">
+        <div class="container reveal active">
+            <span style="color: var(--electric-cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Plastic</span>
+            <h1 style="margin: 1rem 0 2rem;">Rajiv Plastics Pvt. Ltd.</h1>
+            <p style="max-width: 800px; margin: 0 auto;">S4 HANA On Premise Support</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="glass-card reveal">
+                <h2 style="color: var(--white); margin-bottom: 1.5rem;">The Challenge</h2>
+                <p style="margin-bottom: 3rem;">Comprehensive 24x7 P1 support for an extensive S4 HANA 2020 landscape, managing 7 SAP instances and heavy customizations.</p>
+                
+                <h2 style="color: var(--white); margin-bottom: 1.5rem;">The Impact</h2>
+                <p>Ensured operational continuity and high performance across all 7 SAP instances with zero critical downtime.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | GHL Software Services</title>
+    <meta name="description" content="Learn about GHL Software Services, our mission, vision, and the expert team driving enterprise innovation.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, var(--navy), var(--primary-blue));
+            color: var(--bg-white);
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .vm-card {
+            background: var(--bg-white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        .vm-icon {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cube"></i> GHL<span>Enterprise</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal active">
+            <h1>About GHL Enterprise</h1>
+            <p>Pioneering digital transformation through cutting-edge technology and unparalleled consulting expertise.</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="reveal">
+                    <span class="section-subtitle">Who We Are</span>
+                    <h2>A Legacy of Technological Excellence</h2>
+                    <p>GHL Software Services and Solutions Pvt Ltd is a premier global IT consulting firm specializing in SAP implementations, AWS cloud architectures, and enterprise cybersecurity.</p>
+                    <p>With a presence across multiple continents, we combine deep industry knowledge with technical mastery to deliver solutions that drive sustainable growth and operational agility.</p>
+                    
+                    <ul style="list-style: none; padding-top: 1rem;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--primary-light); font-size: 1.25rem;"></i>
+                            <strong>Global Delivery Model</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--primary-light); font-size: 1.25rem;"></i>
+                            <strong>Certified Domain Experts</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check-circle" style="color: var(--primary-light); font-size: 1.25rem;"></i>
+                            <strong>Client-Centric Approach</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Team Collaboration" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+            
+            <div class="vision-mission-grid">
+                <div class="vm-card reveal">
+                    <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To be the globally recognized leader in enterprise digital transformation, setting industry standards for innovation, reliability, and technological foresight.</p>
+                </div>
+                <div class="vm-card reveal" style="transition-delay: 0.1s;">
+                    <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To empower organizations by building robust, scalable, and intelligent IT foundations that solve today's complex business challenges while preparing for tomorrow's opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem; display: inline-flex;">
+                        <i class="fa-solid fa-cube" style="color: var(--cyan);"></i> GHL<span style="color: var(--cyan);">Enterprise</span>
+                    </a>
+                    <p>Delivering premium SAP and AWS consulting solutions for global enterprises. Transform your business with intelligent technology.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="journey.html">Our Journey</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">SAP Consulting</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> 123 Enterprise Blvd, Tech Hub</li>
+                        <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +91 7670946355</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> contact@ghlenterprise.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GHL Software Services and Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

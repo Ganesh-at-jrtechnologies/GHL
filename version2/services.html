@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Services | GHL Software Services</title>
+    <meta name="description" content="Explore our premium SAP consulting, AWS cloud migration, and enterprise IT services.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, var(--navy), var(--primary-blue));
+            color: var(--bg-white);
+            text-align: center;
+        }
+        .page-header h1 { color: var(--bg-white); margin-bottom: 1rem; }
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .detailed-service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .detailed-service-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .detailed-service-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .service-img-wrapper {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .service-features li {
+            padding: 1rem;
+            background: var(--bg-section);
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-left: 3px solid var(--primary-blue);
+        }
+        
+        .service-features i {
+            color: var(--primary-light);
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cube"></i> GHL<span>Enterprise</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal active">
+            <h1>Our Enterprise Services</h1>
+            <p>End-to-end technology solutions designed for scale, security, and exceptional performance.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="section" style="padding-top: 0px; !important">
+        <div class="container">
+            
+            <div class="detailed-service-item reveal">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="SAP Consulting">
+                </div>
+                <div class="service-info">
+                    <span class="section-subtitle">Core Expertise</span>
+                    <h2>SAP Implementation & Consulting</h2>
+                    <p>As a certified partner, we guide enterprises through seamless SAP transitions. From initial strategy to post-go-live support, we ensure your business processes are optimized for the digital age.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-brands fa-sap"></i> SAP S/4HANA Migration</li>
+                        <li><i class="fa-solid fa-gears"></i> Business Process Optimization</li>
+                        <li><i class="fa-solid fa-headset"></i> Application Management Services (AMS)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="detailed-service-item reveal">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" alt="Cloud Architecture">
+                </div>
+                <div class="service-info">
+                    <span class="section-subtitle">Scalable Infrastructure</span>
+                    <h2>AWS Cloud Solutions</h2>
+                    <p>Modernize your infrastructure with advanced AWS cloud architectures. We build resilient, secure, and highly available environments that reduce TCO and accelerate innovation.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-brands fa-aws"></i> Cloud Migration & Strategy</li>
+                        <li><i class="fa-solid fa-server"></i> Serverless Architecture Design</li>
+                        <li><i class="fa-solid fa-chart-line"></i> Cloud Cost Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="detailed-service-item reveal">
+                <div class="service-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" alt="Cybersecurity">
+                </div>
+                <div class="service-info">
+                    <span class="section-subtitle">Data Protection</span>
+                    <h2>Enterprise Cybersecurity</h2>
+                    <p>Protect your most valuable assets with our comprehensive security frameworks. We implement zero-trust architectures and continuous monitoring to safeguard against emerging threats.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-shield-halved"></i> Zero-Trust Architecture</li>
+                        <li><i class="fa-solid fa-user-lock"></i> Identity & Access Management</li>
+                        <li><i class="fa-solid fa-magnifying-glass-chart"></i> Threat Intelligence & Auditing</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem; display: inline-flex;">
+                        <i class="fa-solid fa-cube" style="color: var(--cyan);"></i> GHL<span style="color: var(--cyan);">Enterprise</span>
+                    </a>
+                    <p>Delivering premium SAP and AWS consulting solutions for global enterprises. Transform your business with intelligent technology.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="journey.html">Our Journey</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">SAP Consulting</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> 123 Enterprise Blvd, Tech Hub</li>
+                        <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +91 7670946355</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> contact@ghlenterprise.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GHL Software Services and Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

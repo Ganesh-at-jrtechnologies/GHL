@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GHL Software Services</title>
+    <meta name="description" content="Get in touch with GHL Enterprise for premium SAP and AWS consulting services.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, var(--navy), var(--primary-blue));
+            color: var(--bg-white);
+            text-align: center;
+        }
+        .page-header h1 { color: var(--bg-white); margin-bottom: 1rem; }
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cube"></i> GHL<span>Enterprise</span>
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal active">
+            <h1>Let's Connect</h1>
+            <p>Ready to transform your business? Reach out to our enterprise consulting team today.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 style="color: #23AEECff;">Global Headquarters</h3>
+                    <p style="color: #000000;">Partner with us to architect your digital future.</p>
+                    
+                    <div style="margin-top: 3rem;">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4 style="color: #000000; margin-bottom: 0.5rem;">Our Office</h4>
+                                <p style="margin: 0; color: #000000;">123 Enterprise Blvd, Tech Hub<br>Silicon Valley, CA 94025<br>United States</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4 style="color: #000000; margin-bottom: 0.5rem;">Email Us</h4>
+                                <p style="margin: 0; color: #000000;">contact@ghlenterprise.com<br>support@ghlenterprise.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4 style="color: #000000; margin-bottom: 0.5rem;">Call Us</h4>
+                                <p style="margin: 0; color: #000000;">+91 7670946355<br>Mon - Fri, 9am - 6pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" style="transition-delay: 0.1s;">
+                    <h3 style="margin-bottom: 2rem;">Send a Message</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for reaching out. Our team will contact you shortly.');">
+                        <div class="form-group">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Business Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Interested Service</label>
+                            <select id="service" class="form-control" required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="sap">SAP Consulting & Migration</option>
+                                <option value="aws">AWS Cloud Solutions</option>
+                                <option value="cybersecurity">Cybersecurity Audit</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Project Details</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your business challenges..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem; display: inline-flex;">
+                        <i class="fa-solid fa-cube" style="color: var(--cyan);"></i> GHL<span style="color: var(--cyan);">Enterprise</span>
+                    </a>
+                    <p>Delivering premium SAP and AWS consulting solutions for global enterprises. Transform your business with intelligent technology.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="journey.html">Our Journey</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">SAP Consulting</a></li>
+                        <li><a href="services.html">Cloud Architecture</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                        <li><a href="services.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> 123 Enterprise Blvd, Tech Hub</li>
+                        <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +91 7670946355</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> contact@ghlenterprise.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GHL Software Services and Solutions Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

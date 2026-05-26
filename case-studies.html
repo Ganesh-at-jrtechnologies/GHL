@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise Transformation Success Stories - GHL Software Services">
+    <title>GHL Software Services | Case Studies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Specific Case Studies Styles */
+        .cs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .cs-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        .cs-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+        .cs-image-wrapper {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        .cs-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            opacity: 0.8;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+        }
+        .cs-card:hover .cs-image {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        .cs-image-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, var(--bg-color) 0%, transparent 100%);
+        }
+        .cs-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+        .industry-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(14, 165, 233, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--primary);
+            color: var(--text-main);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+        .tech-tag {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .cs-btn {
+            margin-top: auto;
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+            text-decoration: none;
+            padding-top: 1rem;
+            border-top: 1px solid var(--glass-border);
+        }
+        .cs-card:hover .cs-btn {
+            gap: 15px;
+            color: white;
+        }
+        .cs-logo {
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            margin-top: -45px;
+            z-index: 3;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .breadcrumb a {
+            color: var(--primary);
+        }
+        .breadcrumb i {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; width: 50px; height: 50px; animation-duration: 20s;"></div>
+        <div class="particle" style="left: 30%; width: 20px; height: 20px; animation-duration: 15s; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 60%; width: 40px; height: 40px; animation-duration: 18s; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 80%; width: 15px; height: 15px; animation-duration: 12s; animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+            <button class="mobile-menu-btn">&#9776;</button>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="journey.html" class="nav-link">Our Journey</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="case-studies.html" class="nav-link active">Case Studies</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header (Hero Section) -->
+    <section class="page-header" style="position: relative; overflow: hidden; padding: 200px 0 150px;">
+        <div class="hero-bg animated-gradient-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;"></div>
+        
+        <!-- World Map Glow Simulation -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 70%); z-index: -1;"></div>
+        
+        <div class="container reveal" style="position: relative; z-index: 1;">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Case Studies</span>
+            </div>
+            
+            <span class="hero-subtitle" style="color: var(--text-main); background: rgba(14,165,233,0.2); padding: 5px 15px; border-radius: 20px; display: inline-block; border: 1px solid var(--primary); margin-bottom: 1.5rem;">Success Stories</span>
+            <h1 class="page-title" style="font-size: clamp(3rem, 5vw, 4.5rem);">Enterprise <span class="text-gradient">Transformation</span></h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 3rem; color: #cbd5e1;">Explore how GHL delivers SAP modernization, cloud transformation, enterprise automation, and managed services across industries globally.</p>
+            
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="assets/pdfs/GHL-Corporate-Profile.pdf" download class="btn btn-primary" style="gap: 10px;">
+                    <i class="fas fa-file-download"></i> Download Company Profile PDF
+                </a>
+                <a href="assets/pdfs/GHL SAP Case Studies.pdf" download class="btn btn-outline" style="gap: 10px; background: rgba(0,0,0,0.05); backdrop-filter: blur(10px);">
+                    <i class="fas fa-file-pdf"></i> Download SAP Case Studies PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid Section -->
+    <section class="section" style="background: var(--bg-color-light);">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 style="margin-bottom: 1rem;">Featured <span class="text-gradient">Projects</span></h2>
+                <p style="max-width: 600px; margin: 0 auto;">Discover how we empower market leaders to achieve operational excellence and digital resilience.</p>
+            </div>
+            
+            <div class="cs-grid">
+                
+                <!-- Card 1 -->
+                <div class="cs-card reveal">
+                    <span class="industry-tag"><i class="fas fa-industry"></i> Plastic</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client3.jpg" alt="Rajiv Plastics" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-cube fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Rajiv Plastics Pvt. Ltd.</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">S4 HANA On Premise Support</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Comprehensive 24x7 P1 support for an extensive S4 HANA 2020 landscape, managing 7 SAP instances and heavy customizations.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">S/4HANA</span>
+                            <span class="tech-tag">FI/CO</span>
+                            <span class="tech-tag">ABAP</span>
+                        </div>
+                        <a href="case-study-rajiv.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="cs-card reveal" style="transition-delay: 0.1s;">
+                    <span class="industry-tag"><i class="fas fa-leaf"></i> Sugar</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client4.jpg" alt="Ugar Sugar Works" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-industry fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">The Ugar Sugar Works Ltd</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">SAP EHP8 ECC Support</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Proactive SAP support and maintenance, delivering 100% SLA compliance and reducing tickets by 50%.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">SAP ECC EHP8</span>
+                            <span class="tech-tag">BASIS</span>
+                            <span class="tech-tag">FIORI</span>
+                        </div>
+                        <a href="case-study-ugar.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="cs-card reveal" style="transition-delay: 0.2s;">
+                    <span class="industry-tag"><i class="fas fa-gavel"></i> Steel</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client1.jpg" alt="Anugraha Valve Castings" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-fire fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Anugraha Valve Castings</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">S4 Public Cloud Support</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">24x7 P1 ticket management for S4 HANA 2502 Public Cloud and AWS landscapes resulting in a 70% ticket reduction.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">S4 HANA Cloud</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">RAP</span>
+                        </div>
+                        <a href="case-study-avcl.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="cs-card reveal">
+                    <span class="industry-tag"><i class="fas fa-cogs"></i> Mfg</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client2.png" alt="Eviden India" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-barcode fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Eviden India</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">WM With Barcode Implementation</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">End-to-end WM configuration and automation of Goods Receipt, Transfer, and Issue via seamless barcode integration.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WM</span>
+                            <span class="tech-tag">Barcode</span>
+                            <span class="tech-tag">JAVA/HTML</span>
+                        </div>
+                        <a href="case-study-eviden.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="cs-card reveal" style="transition-delay: 0.1s;">
+                    <span class="industry-tag"><i class="fas fa-leaf"></i> Sugar</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client4.jpg" alt="Ugar Sugar Works Migration" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-server fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">The Ugar Sugar Works Ltd</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">Migration & Upgrade</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">Complex migration of 10 instances and upgrade from legacy ECC 6.0 to EHP8 with full SAP Fiori enablement.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Migration</span>
+                            <span class="tech-tag">EHP8</span>
+                            <span class="tech-tag">HANA DB</span>
+                        </div>
+                        <a href="case-study-ugar-migration.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="cs-card reveal" style="transition-delay: 0.2s;">
+                    <span class="industry-tag"><i class="fas fa-gavel"></i> Steel</span>
+                    <div class="cs-image-wrapper">
+                        <img src="images/backgrounds/client1.jpg" alt="Anugraha HANA" class="cs-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%231e293b%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 fill=%22%23475569%22 font-family=%22Arial%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
+                        <div class="cs-image-overlay"></div>
+                    </div>
+                    <div class="cs-content">
+                        <div class="cs-logo"><i class="fas fa-project-diagram fa-lg text-primary"></i></div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Anugraha Valve Castings</h3>
+                        <p style="color: var(--primary); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem;">HANA Implementation</p>
+                        <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">S4 HANA 2502 Public Cloud implementation, integrating P2P, O2C, and R2R processes for end-to-end visibility.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">S4 HANA</span>
+                            <span class="tech-tag">SCM</span>
+                            <span class="tech-tag">ABAP Cloud</span>
+                        </div>
+                        <a href="case-study-avcl-implementation.html" class="cs-btn">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+                    <p>Empowering businesses with SAP solutions, cloud transformation, and enterprise innovation since 2019.</p>
+                    <div class="social-icons" style="margin-top: 1.5rem;">
+                        <a href="#" style="margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="journey.html">Our Journey</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Hyderabad, India (HQ)</li>
+                        <li><i class="fas fa-envelope"></i> info@ghlsoftwaresolutions.com</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="margin-bottom: 1rem;">Subscribe for the latest enterprise insights.</p>
+                    <form class="newsletter-form" style="display: flex;">
+                        <input type="email" placeholder="Your Email" required style="padding: 0.8rem; border: none; border-radius: 5px 0 0 5px; outline: none; width: 100%;">
+                        <button type="submit" class="btn-primary" style="border: none; padding: 0 1rem; border-radius: 0 5px 5px 0; cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 GHL Software Services and Solutions Pvt Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

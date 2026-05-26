@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact GHL Software Services and Solutions Pvt Ltd.">
+    <title>Contact Us | GHL Software Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-info-item {
+            margin-bottom: 2rem;
+        }
+        .contact-info-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: var(--text-main);
+            font-family: var(--font-body);
+            transition: all var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(0, 0, 0, 0.1);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+            <button class="mobile-menu-btn">&#9776;</button>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="journey.html" class="nav-link">Our Journey</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container reveal">
+            <h1 class="page-title">Get in <span class="text-gradient">Touch</span></h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.2rem;">Let's discuss how we can accelerate your digital transformation.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <div class="reveal">
+                    <h2>Reach out to our <span class="text-gradient">Experts</span></h2>
+                    <p>Have a question or want to learn more about our services? Our team is ready to help you navigate your IT challenges.</p>
+                    
+                    <div style="margin-top: 3rem;">
+                        <div class="contact-info-item">
+                            <h4>Global Headquarters</h4>
+                            <p>Chitrapuri Colony,
+HIG Block-7,
+Flat No:202, 2nd Floor
+Manikonda Jagir,
+Hyderabad - 500008,
+RangaReddy District, Telengana., INDIA.</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Direct Contact</h4>
+                            <p>Phone: +91 7670946355<br>Email: info@ghlsoftwaresolutions.com</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM (PST)<br>24/7 Enterprise Support Available</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required style="appearance: none;">
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="sap">SAP Consulting</option>
+                                <option value="cloud">Cloud Services</option>
+                                <option value="data">Data Analytics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+                    <p>GHL Software Services and Solutions Pvt Ltd empowers global enterprises with innovative IT and premium SAP consulting services.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="journey.html">Our Journey</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">SAP Consulting</a></li>
+                        <li><a href="services.html">Cloud Solutions</a></li>
+                        <li><a href="services.html">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>info@ghlsoftwaresolutions.com</li>
+                        <li>+91 7670946355</li>
+                        <li>Chitrapuri Colony,
+HIG Block-7,
+Flat No:202, 2nd Floor
+Manikonda Jagir,
+Hyderabad - 500008,
+RangaReddy District, Telengana., INDIA.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 GHL Software Services and Solutions Pvt Ltd. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to top">&uarr;</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
