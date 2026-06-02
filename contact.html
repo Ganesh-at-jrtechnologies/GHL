@@ -46,6 +46,65 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Premium Alert Design */
+        .form-alert {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            animation: slideDownFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .form-alert-success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: #064e3b;
+        }
+        .form-alert-error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            color: #7f1d1d;
+        }
+        .form-alert-icon {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+        }
+        @keyframes slideDownFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Button Loading Spinner */
+        .btn-loading {
+            pointer-events: none;
+            position: relative;
+            color: transparent !important;
+        }
+        .btn-loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-top: -10px;
+            margin-left: -10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            animation: spin 0.8s linear infinite;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +117,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+            <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 75px; width: auto;"></a>
             <button class="mobile-menu-btn">&#9776;</button>
             <ul class="nav-links">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -91,12 +150,7 @@
                     <div style="margin-top: 3rem;">
                         <div class="contact-info-item">
                             <h4>Global Headquarters</h4>
-                            <p>Chitrapuri Colony,
-HIG Block-7,
-Flat No:202, 2nd Floor
-Manikonda Jagir,
-Hyderabad - 500008,
-RangaReddy District, Telengana., INDIA.</p>
+                            <p>Chitrapuri Colony,<br>HIG Block-7,<br>Flat No:202, 2nd Floor<br>Manikonda Jagir,<br>Hyderabad - 500008,<br>RangaReddy District, Telengana., INDIA.</p>
                         </div>
                         <div class="contact-info-item">
                             <h4>Direct Contact</h4>
@@ -110,29 +164,33 @@ RangaReddy District, Telengana., INDIA.</p>
                 </div>
 
                 <div class="glass-card reveal" style="transition-delay: 0.2s;">
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <form id="contactForm" novalidate>
+                        <!-- Form Response Message Container -->
+                        <div id="formResponse" style="display: none;"></div>
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Company Name">
+                            <input type="text" id="company" name="company" class="form-control" placeholder="Company Name">
                         </div>
-                        <div class="form-group">
-                            <select class="form-control" required style="appearance: none;">
+                        <div class="form-group" style="position: relative;">
+                            <select id="inquiry" name="inquiry" class="form-control" required style="appearance: none;">
                                 <option value="" disabled selected>Select Inquiry Type</option>
-                                <option value="sap">SAP Consulting</option>
-                                <option value="cloud">Cloud Services</option>
-                                <option value="data">Data Analytics</option>
-                                <option value="other">Other</option>
+                                <option value="SAP Consulting">SAP Consulting</option>
+                                <option value="Cloud Services">Cloud Services</option>
+                                <option value="Data Analytics">Data Analytics</option>
+                                <option value="Other">Other</option>
                             </select>
+                            <span style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--text-muted);">&#9662;</span>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
 
@@ -145,7 +203,7 @@ RangaReddy District, Telengana., INDIA.</p>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 40px; width: auto;"></a>
+                    <a href="index.html" class="logo"><img src="images/logo/ghllogo.jpg" alt="GHL" style="max-height: 75px; width: auto;"></a>
                     <p>GHL Software Services and Solutions Pvt Ltd empowers global enterprises with innovative IT and premium SAP consulting services.</p>
                 </div>
                 <div>
@@ -169,12 +227,7 @@ RangaReddy District, Telengana., INDIA.</p>
                     <ul class="footer-links">
                         <li>info@ghlsoftwaresolutions.com</li>
                         <li>+91 7670946355</li>
-                        <li>Chitrapuri Colony,
-HIG Block-7,
-Flat No:202, 2nd Floor
-Manikonda Jagir,
-Hyderabad - 500008,
-RangaReddy District, Telengana., INDIA.</li>
+                        <li>Chitrapuri Colony,<br>HIG Block-7,<br>Flat No:202, 2nd Floor<br>Manikonda Jagir,<br>Hyderabad - 500008,<br>RangaReddy District, Telengana., INDIA.</li>
                     </ul>
                 </div>
             </div>
@@ -187,5 +240,109 @@ RangaReddy District, Telengana., INDIA.</li>
     <button id="back-to-top" title="Back to top">&uarr;</button>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formResponse = document.getElementById('formResponse');
+
+            if (!form) return;
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Clear previous alerts
+                formResponse.style.display = 'none';
+                formResponse.innerHTML = '';
+
+                // Simple client-side validation
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const inquiry = document.getElementById('inquiry').value;
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !inquiry || !message) {
+                    showResponse('Please fill in all required fields.', 'error');
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    showResponse('Please enter a valid email address.', 'error');
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.classList.add('btn-loading');
+                setFormDisabled(true);
+
+                try {
+                    // Send request to send_email.php
+                    const response = await fetch('send_email.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name,
+                            email,
+                            company,
+                            inquiry,
+                            message
+                        })
+                    });
+
+                    let result;
+                    try {
+                        result = await response.json();
+                    } catch (err) {
+                        result = { success: false, message: 'Invalid server response. Please check your PHP server configuration.' };
+                    }
+
+                    if (result.success) {
+                        showResponse(result.message || 'Thank you! Your message has been sent successfully.', 'success');
+                        form.reset();
+                    } else {
+                        showResponse(result.message || 'There was a problem sending your message. Please try again.', 'error');
+                    }
+                } catch (error) {
+                    showResponse('Could not connect to the mail server. Please check your network connection.', 'error');
+                } finally {
+                    // Hide loading state
+                    submitBtn.classList.remove('btn-loading');
+                    setFormDisabled(false);
+                }
+            });
+
+            function validateEmail(email) {
+                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+
+            function setFormDisabled(disabled) {
+                const elements = form.querySelectorAll('input, select, textarea, button');
+                elements.forEach(el => {
+                    if (disabled) {
+                        el.setAttribute('disabled', 'true');
+                    } else {
+                        el.removeAttribute('disabled');
+                    }
+                });
+            }
+
+            function showResponse(msg, type) {
+                const icon = type === 'success' 
+                    ? `<svg class="form-alert-icon" fill="currentColor" viewBox="0 0 20 20" style="width:20px; height:20px; color:#10b981;"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>`
+                    : `<svg class="form-alert-icon" fill="currentColor" viewBox="0 0 20 20" style="width:20px; height:20px; color:#ef4444;"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>`;
+
+                formResponse.className = `form-alert form-alert-${type}`;
+                formResponse.innerHTML = `${icon}<span>${msg}</span>`;
+                formResponse.style.display = 'flex';
+                
+                // Scroll slightly to show message if needed
+                formResponse.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    </script>
 </body>
 </html>
